@@ -1,6 +1,6 @@
 SIMPLE TASK
 
-This is a demo app creatwed by Marco Castillo. It includes the following library created by him:
+This is a demo app created by Marco Castillo. It includes the following library created by him:
 
 - routing for http nodejs
 - mongo handler for mongodb client
