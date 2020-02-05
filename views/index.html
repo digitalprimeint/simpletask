@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Simple Task</title>
+    <link href="/css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div class="container bg-dark mb-5">
+        <div class="row">
+            <h2>Simple Task</h2>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row p-0">
+            <div class="col-4">
+                <div class="card">
+                    <h4>ADD TASK</h4>
+                    <hr>
+                    <label>Title</label>
+                    <input id="title" type="text" placeholder="Add a task name" />
+                    <label>Description</label>
+                    <textarea id="description" rows="5" placeholder="Add a task description"></textarea>
+                    <label>Priority</label>
+                    <select id="priority">
+                        <option value="Low">Low</option>
+                        <option value="Medium">Medium</option>
+                        <option value="High">High</option>
+                    </select>
+                    <input class="btn" type="button" value="ADD" onclick="addTask()">
+                </div>
+            </div>
+            <div class="col-8">
+                <div class="row">
+                    <div class="col-8 direction-row">
+                        <label>Search:</label>
+                        <input id="search" type="text" placeholder="Search using title or description" style="width: 400px;" onkeyup="search()">
+                    </div>
+                    <div class="col-4 direction-row align-right">
+                        <a href="#" onclick="filterPriority('All')">All</a> | <a href="#" onclick="filterPriority('Low')">Low</a> | <a href="#" onclick="filterPriority('Medium')">Medium</a> | <a href="#" onclick="filterPriority('High')">High</a>
+                    </div>
+                </div>
+                <div class="row p-0">
+                    <hr>
+                </div>
+                <div id="container" class="row wrap">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/js/task-handler.js"></script>
+    <script src="/js/json-reader.js"></script>
+    <script src="/js/app.js"></script>
+</body>
+
+</html>
